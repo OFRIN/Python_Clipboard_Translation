@@ -80,7 +80,7 @@ class App(QMainWindow):
         if self.translator.detect(search_string).lang != 'en':
             self.timer.start()
             return
-        
+
         output = self.translator.translate(search_string, src = 'en', dest = 'ko')
         translate_string = output.text
 
@@ -90,7 +90,8 @@ class App(QMainWindow):
 
         self.label_1.setGeometry(QRect(0, 0, len(translate_string) * 2, 25))
         self.label_1.setText(output.text)
-
+        
+        self.setWindowFlags(Qt.Window | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
         self.setGeometry(mouse_x, mouse_y + 20, len(translate_string) * 2 + 10, 25)
         self.show()
         
