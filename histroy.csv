@@ -14,3 +14,4 @@ append many languages.,많은 언어를 추가합니다.
 output = self.translator.translate(search_string, src = 'en', dest = 'ko'),출력 = self.translator.translate (SEARCH_STRING, SRC = "EN '최종 도착 ='KO ')
 If your languages is different, please replace "src" and "dest".,당신의 언어가 다른 경우, "SRC"와 "이명 령"을 교환하십시오.
 different,다른
+translator,역자

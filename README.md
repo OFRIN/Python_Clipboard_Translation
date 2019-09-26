@@ -14,10 +14,14 @@ python main.py
 ```
 
 2. Drag and drop (Sentence or Word)
+
 ![res](./res/1.PNG)
 
+
 3. Ctrl + C !!
+
 ![res](./res/2.PNG)
+
 
 Please note that:
 1. If you want to different languages, please replace "src" and "dest".

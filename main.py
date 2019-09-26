@@ -80,14 +80,14 @@ class App(QMainWindow):
         if self.translator.detect(search_string).lang != 'en':
             self.timer.start()
             return
-
+        
         output = self.translator.translate(search_string, src = 'en', dest = 'ko')
         translate_string = output.text
 
         f = open('histroy.csv', 'a+', encoding = 'utf-8')
         f.write('{},{}\n'.format(search_string, translate_string))
         f.close()
-        
+
         self.label_1.setGeometry(QRect(0, 0, len(translate_string) * 2, 25))
         self.label_1.setText(output.text)
 
