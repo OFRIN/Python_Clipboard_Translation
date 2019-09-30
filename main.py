@@ -1,6 +1,12 @@
 # Copyright (C) 2019 * Ltd. All rights reserved.
 # author : SangHyeon Jo <josanghyeokn@gmail.com>
 
+'''
+pip install pyperclip
+pip install googletrans
+pip install PyQt5
+'''
+
 import sys
 import PyQt5
 import ctypes
@@ -83,20 +89,20 @@ class App(QMainWindow):
 
         output = self.translator.translate(search_string, src = 'en', dest = 'ko')
         translate_string = output.text
-
+        
         f = open('histroy.csv', 'a+', encoding = 'utf-8')
         f.write('{},{}\n'.format(search_string, translate_string))
         f.close()
 
         self.label_1.setGeometry(QRect(0, 0, len(translate_string) * 2, 25))
         self.label_1.setText(output.text)
-        
+
         self.setWindowFlags(Qt.Window | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
         self.setGeometry(mouse_x, mouse_y + 20, len(translate_string) * 2 + 10, 25)
         self.show()
         
         self.timer.start()
-
+    
     def keyPressEvent(self, e):
         if e.key() == Qt.Key_Escape:
             self.hide()

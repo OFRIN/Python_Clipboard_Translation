@@ -13,6 +13,12 @@ pip install PyQt5
 python main.py
 ```
 
+or
+
+```sh
+
+```
+
 2. Drag and drop (Sentence or Word)
 
 ![res](./res/1.PNG)
