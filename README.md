@@ -16,7 +16,7 @@ python main.py
 or
 
 ```sh
-
+./dist/main.exe
 ```
 
 2. Drag and drop (Sentence or Word)
